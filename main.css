@@ -184,7 +184,7 @@ label, input, select, textarea{
 	color: white;
 	display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
 	.topnav.responsive .dropdown-content div{
 		display: block;
 	}
@@ -197,7 +197,7 @@ label, input, select, textarea{
 	  display: block;
 	}
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 660px) {
 	.topnav.responsive {position: fixed;}
 	.topnav.responsive a.icon {
 	  position: absolute;
@@ -210,7 +210,7 @@ label, input, select, textarea{
 	  text-align: left;
 	}
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 660px) {
 	.topnav.responsive{
 		position: fixed;
 	}
@@ -219,7 +219,7 @@ label, input, select, textarea{
 		top: 22.5px;
 	}
   }	
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 660px) {
 	.topnav{
 		
 		text-align: left;
