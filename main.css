@@ -221,7 +221,6 @@ label, input, select, textarea{
   }	
   @media screen and (max-width: 660px) {
 	.topnav{
-		
 		text-align: left;
 	}
 }
