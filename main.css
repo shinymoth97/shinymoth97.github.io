@@ -80,9 +80,6 @@ nav{
 	display: inline-block;
 	position: relative;
 }
-.topnav.responsive .dropdown{
-	display: block;
-}
 .dropdown-content {
 	z-index: 2;
   display: none;
@@ -189,6 +186,9 @@ label, input, select, textarea{
 }
 @media screen and (max-width: 800px) {
 	.topnav.responsive .dropdown-content div{
+		display: block;
+	}
+	.topnav.responsive .dropdown{
 		display: block;
 	}
 	.topnav a:not(.first) {display: none;}
