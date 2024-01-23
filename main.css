@@ -40,9 +40,14 @@ h3{
 	margin: auto;
 	padding-bottom: 50px;
 }
-p{
+p, details{
 	text-align: justify;
 	padding: 0px 50px;
+}
+embed{
+	margin-right: -4px;
+	padding-top: 50px;
+	display: inline;
 }
 body::-webkit-scrollbar{
 	display: none;
@@ -127,6 +132,9 @@ nav a.active{
 	line-height: 0px;
 	color: white;
 	font-size: 15px;
+}
+a.active .text{
+	color: lawngreen;
 }
 table {
 	font-family: arial, sans-serif;

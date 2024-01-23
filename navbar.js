@@ -13,7 +13,7 @@ Home</div>
 <div class="dropdown">
   <a href="#" class="dropbtn nav-link">Tutorials <i class="fa fa-caret-down"></i></a>
   <div class="dropdown-content">
-    <a href="#" class="nav-link">Scratch</a>
+    <a href="scratch.html" class="nav-link">Scratch</a>
 	<a href="#" class="nav-link">Html</a>
   </div>
 </div>
@@ -41,5 +41,12 @@ function myFunction() {
     x.className += " responsive";
   } else {
     x.className = "topnav";
+  }
+}
+const navLinks = document.querySelectorAll(".nav-link");
+for (const link of navLinks) {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+    link.removeAttribute("href");
   }
 }
