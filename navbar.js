@@ -19,6 +19,14 @@ Home</div>
 </div>
 
 <div class="dropdown">
+  <a href="#" class="dropbtn nav-link">App Hub <i class="fa fa-caret-down"></i></a>
+  <div class="dropdown-content">
+    <a href="extensions.html" class="nav-link">Extensions</a>
+    <a href="websites.html" class="nav-link">Websites</a>
+  </div>
+</div>
+
+<div class="dropdown">
   <a href="#" class="dropbtn nav-link">Shortcuts <i class="fa fa-caret-down"></i></a>
   <div class="dropdown-content">
     <a href="youtube_shortcuts.html" class="nav-link">Youtube</a>
@@ -50,3 +58,16 @@ for (const link of navLinks) {
     link.removeAttribute("href");
   }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  var navbar = document.querySelector('nav');
+  var headings = document.querySelectorAll('h3');
+
+  if (navbar) {
+      var navbarHeight = navbar.offsetHeight;
+
+      headings.forEach(function (heading) {
+          heading.style.scrollMarginTop = (navbarHeight + 30) + 'px';
+      });
+  }
+});

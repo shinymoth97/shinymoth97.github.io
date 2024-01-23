@@ -19,6 +19,11 @@ a{
 	color: lightseagreen;
 	text-decoration: none;
 }
+h3 a{
+	color: lawngreen;
+	text-decoration: underline;
+	width: calc(100% - 100px);
+}
 h2{
 	color: lawngreen;
 	padding-top: 50px;
@@ -39,10 +44,18 @@ h3{
 	background-color: rgb(65, 65, 65);
 	margin: auto;
 	padding-bottom: 50px;
+	overflow: auto;
 }
-p, details{
+p, details, ol{
 	text-align: justify;
 	padding: 0px 50px;
+	width: calc(100% - 100px);
+}
+ol{
+	list-style-position: inside;	
+}
+img{
+	margin-top: 10px;
 }
 iframe{
 	margin-right: -4px;
@@ -61,7 +74,6 @@ nav{
 	top: 0;
 	width: 100%;
 	background-color: black;
-	height: 70px;
 	position: fixed;
 }
 .nav-link{
@@ -140,8 +152,8 @@ table {
 	border-collapse: collapse;
 	color: black;
 	background-color: white;
-	width: 92%;
 	margin: auto;
+	width: calc(100% - 100px);
   }
   
   td, th {
@@ -157,6 +169,11 @@ table {
 	float: right;
 	background-color: white;
 	margin-left: 10px;
+  }
+  .float_left{
+	float: left;
+	background-color: white;
+	margin-right: 10px;
   }
   
   body {box-sizing: border-box;}
