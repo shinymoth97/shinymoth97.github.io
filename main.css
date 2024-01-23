@@ -46,7 +46,6 @@ p, details{
 }
 iframe{
 	margin-right: -4px;
-	padding-top: 50px;
 	display: inline;
 }
 body::-webkit-scrollbar{
