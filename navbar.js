@@ -35,11 +35,16 @@ Home</div>
 
 <a href="contact.html" class="dropbtn nav-link">Contact</a>
 
-<a href="#" class="nav-link">About</a>
-
 <a href="javascript:void(0);" class="icon nav-link" onclick="myFunction()">
     <i class="fa fa-bars"></i></a>
 </nav>
+<div class="icon-bar">
+
+<a href="https://www.youtube.com/@shinymoth97?sub_confirmation=1" title="Main Youtube Channel" class="fab fa-youtube g"></a>
+<a href="https://youtube.com/@shinymoth97gaming?sub_confirmation=1" title="Gaming Youtube Channel" class="fab fa-youtube b"></a>
+<a href="https://discord.gg/QcrTJg4E" title="Discord Server" class="fab fa-discord"></a>
+
+</div>
 `;
 document.getElementById('navbarContainer').innerHTML = navbarCode;
 
