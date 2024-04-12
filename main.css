@@ -61,28 +61,24 @@ h2 a {
     align-items: center;
     margin: 0 50px;
     width: calc(100% - 100px);
+    vertical-align: middle;
 }
 
 .laptop {
-    width: 500px;
+    width: 47.5%;
+    margin-left: 0;
 }
 
 h1 {
-    font-size: 60px;
     color: #ffffff;
     background-color: #00e617;
-    padding: 24px;
+    padding: 20px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    margin-right: 50px;
-    width: 100%;
-}
-
-@media screen and (max-width: 750px) {
-    .laptop {
-        width: 250px;
-    }
+    width: calc(47.5% - 40px);
+    font-size: calc(3vw);
+    margin-right: 5%;
 }
 
 /* Styling for h3 */
@@ -384,10 +380,7 @@ textarea {
 /*Social Media Icons*/
 .icon-bar {
 	position: fixed;
-	bottom: -100px;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+	bottom: 0;
 	left: 15px;
     z-index: 999;
   }
