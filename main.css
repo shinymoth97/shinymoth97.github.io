@@ -462,6 +462,6 @@ textarea {
         font-size: 20px; /* Adjust the font size for smaller screens */
     }
     .fa-discord::before {
-        transform: translate(230%, -50%); /* Center the icon */
+        transform: translate(210%, -45%); /* Center the icon */
     }
 }
