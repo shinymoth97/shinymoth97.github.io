@@ -17,13 +17,12 @@ body.loaded {
 }
 
 /* Paragraph Indentation */
-p.indent {
-    text-indent: 50px;
+.indent p {
+    position: relative;
+    left: 25px;
+    width: calc(100% - 125px);
 }
 
-p.indent::first-line {
-    text-indent: 0;
-}
 
 /* Anchor Link Styling */
 a {
@@ -61,12 +60,11 @@ h2 a {
     display: flex;
     align-items: center;
     margin: 0 50px;
-    width: calc(100% - 100px);
+    width: 500px;
 }
 
 .laptop {
-    max-width: calc(92% - 100px);
-    width: 40vw;
+    width: 500px;
 }
 
 h1 {
@@ -390,7 +388,7 @@ textarea {
 /*Social Media Icons*/
 .icon-bar {
 	position: fixed;
-	top: 50%;
+	bottom: -100px;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
