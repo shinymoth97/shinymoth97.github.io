@@ -106,6 +106,7 @@ h3 {
     background-color: #ffffff;
 	background-color: rgb(65, 65, 65);
     margin: auto;
+    margin-bottom: 50px;
     padding: 20px 0px;
     margin-top: 60px;
 }
@@ -378,59 +379,89 @@ textarea {
 }
 
 /*Social Media Icons*/
+/*Social Media Icons*/
+/*Social Media Icons*/
+/*Social Media Icons*/
+/*Social Media Icons*/
 .icon-bar {
-	position: fixed;
-	bottom: 0;
-	left: 15px;
-    z-index: 999;
-  }
-  
-  .icon-bar a {
-	display: block;
-	text-align: center;
-	transition: all 0.3s ease;
-  }
-  
-.fab {
-    font-size: 2.5vw;
-    width: 2vw;
-    height: 2vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange icons vertically */
+    align-items: flex-start; /* Align icons to the start (left) */
+}
+
+.icon-bar a {
+    display: inline-block;
     text-align: center;
-    margin: 5px 2px;
+    transition: all 0.3s ease;
+}
+
+.fab {
+    font-size: 30px;
+    width: 60px; /* Set width and height to ensure a square shape */
+    height: 60px;
+    line-height: 60px; /* Center the icon vertically */
     border-radius: 50%;
-	padding: 1.4vw;
-	vertical-align: middle;
+    margin: 5px 2px;
 }
 
 .fa-youtube {
-    background: #ff4500;
-    color: white;
-	position: relative;
-}
-.g{
-	text-shadow: 2px 2px 6px #00e617;
-}
-.b{
-	text-shadow: 2px 2px 6px #005ce6;
-}
-.fa-youtube::before {
-    content: ""; 
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-	width: 2vw;    
-	height: 2vw;
-    transform: translate(-1.4vw, -1.4vw);    
+    color: white; /* Set the color without a background */
+    position: relative;
     background-color: #ff4500;
 }
 
+.g {
+    text-shadow: 2px 2px 6px #00e617;
+}
 
+.b {
+    text-shadow: 2px 2px 6px #005ce6;
+}
 .fa-discord {
-    background: #5865F2;
+    background-color: #5865F2;
+}
+.fa-youtube::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the icon */
+    font-size: 24px; /* Adjust the size of the icon */
+}
+
+.fa-discord::before {
     color: white;
+    background-color: #5865F2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 250%); /* Center the icon */
+    font-size: 24px; /* Adjust the size of the icon */
 }
 
 .fab:hover {
     opacity: 0.7;
     color: white;
+}
+
+/* Media query for screens less than 750px */
+@media screen and (max-width: 750px) {
+    .icon-bar {
+        flex-direction: row; /* Arrange icons horizontally */
+        align-items: center; /* Align icons to the center */
+        justify-content: center; /* Align icons horizontally to the center */
+        width: 100%; /* Set width to 100% to cover the screen */
+    }
+    
+    .fab {
+        width: 50px; /* Adjust the width and height for smaller screens */
+        height: 50px;
+        line-height: 50px; /* Center the icon vertically */
+        font-size: 20px; /* Adjust the font size for smaller screens */
+    }
+    .fa-discord::before {
+        transform: translate(230%, -50%); /* Center the icon */
+    }
 }
