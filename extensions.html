@@ -1,44 +1,42 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Extensions</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="icon" href="images/croplogo Round.png">
+    <!-- Incorrect Preload Link -->
+    <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.0/css/all.csss" as="font">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbarContainer"></div>
+	<script src="navbar.js"></script>
 
-<html>
-	<head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-		<link rel="stylesheet" href="main.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-		<link rel="icon" href="images/croplogo Round.png">
-		<link rel="preload" href="https://use.fontawesome.com/releases/v5.13.0/css/all.csss" as="font">
-		<link rel="preload" href="images/bg.png" as="images">
-		<title>Chrome Extensions</title>
-	</head>
+	<!-- Main Content -->
+    <div class="page">
 
-	<body onload="document.body.classList.add('loaded')">
-		<div id="navbarContainer"></div>
-        <div class="page">
-            <h2>Chrome Extensions</h2>
-		<p>Chrome extensions are small software programs that enable users to customize their browsing experience. With your permission, those installed from the Chrome Web Store can modify settings for an enhanced experience, affecting aspects such as your homepage, new tab page, search engine, or start page. It's important to note that Chrome extensions are specific to the Chrome browser, although similar functionalities may exist in other browsers.
-			<br><br>Explore the following list for helpful and top-notch extensions that you should consider downloading.
-		</p>
+		<!-- Introduction -->
+		<h2>Chrome Extensions</h2>
+		<p>Chrome extensions are small software programs that enable users to customize their browsing experience. With your permission, those installed from the Chrome Web Store can modify settings for an enhanced experience, affecting aspects such as your homepage, new tab page, search engine, or start page. It's important to note that Chrome extensions are specific to the Chrome browser, although similar functionalities may exist in other browsers. Explore the following list for helpful and top-notch extensions that you should consider downloading.</p>
+
+		<!-- How to Install -->
 		<details>
-            <summary>How to install.</summary>
-			<br>
+			<summary>How to install.</summary>
 			<ol>
-			<li>Open up Google Chrome.
-				<br><img width="60%" src="images/extension0.png"></li><br>
-			<li>Enter the URL "chromewebstore.google.com" into the address bar and hit Enter.
-				<br><img width="60%" src="images/extension1.png"></li><br>
-			<li>Click on the extensions tab.
-				<br><img width="60%" src="images/extension2.png"></li><br>
-			<li>Locate the extension you wish to install and click on it. Alternatively, you can utilize the search bar for this task.
-				<br><img width="60%" src="images/extension3.png"></li><br>
-			<li>Press the "Add to Chrome" button.
-				<br><img width="60%" src="images/extension4.png"></li><br>
-			<li>A confirmation box will appear; click on "Add extension."
-				<br><img width="60%" src="images/extension5.png"></li><br>
-			<li>The extension is now installed! Click on the small puzzle piece icon to manage extensions, and use the pins to pin extensions to your screen.
-				<br><img width="60%" src="images/extension6.png"></li>
+				<li>Open up Google Chrome.<br><img width="60%" src="images/extension0.png"></li><br>
+				<li>Enter the URL "chromewebstore.google.com" into the address bar and hit Enter.<br><img width="60%" src="images/extension1.png"></li><br>
+				<li>Click on the extensions tab.<br><img width="60%" src="images/extension2.png"></li><br>
+				<li>Locate the extension you wish to install and click on it. Alternatively, you can utilize the search bar for this task.<br><img width="60%" src="images/extension3.png"></li><br>
+				<li>Press the "Add to Chrome" button.<br><img width="60%" src="images/extension4.png"></li><br>
+				<li>A confirmation box will appear; click on "Add extension."<br><img width="60%" src="images/extension5.png"></li><br>
+				<li>The extension is now installed! Click on the small puzzle piece icon to manage extensions, and use the pins to pin extensions to your screen.<br><img width="60%" src="images/extension6.png"></li>
 			</ol>
-        </details>
-		<br>
+		</details>
+
+		<!-- Contents -->
 		<h3>Contents</h3>
 		<ol role="list">
 			<li><a href="#1">Adobe Acrobat: PDF edit, convert, sign tools</a></li>
@@ -47,25 +45,31 @@
 			<li><a href="#4">Google Dictionary</a></li>
 			<li><a href="#5">Grammarly</a></li>
 		</ol>
-		<br>
+
+		<!-- Extension Details -->
 		<h3 id="1"><a href="https://chromewebstore.google.com/detail/efaidnbmnnnibpcajpcglclefindmkaj">Adobe Acrobat: PDF edit, convert, sign tools</a></h3>
 		<p><img width="20%" src="images/pdf.png" class="float_left">Adobe Acrobat PDF tools serve as an extension that enables you to edit PDFs directly in your browser. This extension provides various tools, including options to view, fill, comment, sign, and experiment with conversion and compression features.</p>
-		<br><br><br><br>
+
+		<br clear="both">
+
 		<h3 id="2"><a href="https://chromewebstore.google.com/detail/iginnfkhmmfhlkagcmpgofnjhanpmklb">Boxel Rebound</a></h3>
 		<p><img width="20%" src="images/boxel.png" class="float_right">Experience over 50 levels of exhilarating box-jumping madness in Boxel Rebound! This fast-paced arcade game challenges you to navigate obstacles and achieve the lowest possible time. Dive into the excitement and unleash your creativity by designing and sharing your own levels.</p>
-		<br><br><br><br>
+
+		<br clear="both">
+
 		<h3 id="3"><a href="https://chromewebstore.google.com/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb">Google Translate</a></h3>
 		<p><img width="20%" src="images/translate.png" class="float_left">Google Translate stands as a multilingual neural machine translation service designed by Google to effortlessly translate text, documents, and websites from one language to another. This extension facilitates easy translation viewing as you browse the web. Simply highlight or right-click on a section of text and click on the Translate icon adjacent to it to translate it into your preferred language. Alternatively, for translating the entire page you're visiting, click the translate icon on the browser toolbar.</p>
-		<br><br><br><br>
+
+		<br clear="both">
+
 		<h3 id="4"><a href="https://chromewebstore.google.com/detail/google-dictionary-by-goog/mgijmajocgfcbeboacabfgobmjgjcoja">Google Dictionary</a></h3>
 		<p><img width="20%" src="images/dictionary.png" class="float_right">Google Dictionary serves as Google's online dictionary accessible through the "define" operator and similar phrases in Google Search. This dictionary service is also conveniently available as this Google Chrome extension. You can either double-click a word to select it, prompting a pop-up with the definition, or click on the extension icon to manually enter a word. It provides both definitions and synonyms for a comprehensive understanding of the selected word.</p>
-		<br><br><br><br>
+
+		<br clear="both">
+
 		<h3 id="5"><a href="https://chromewebstore.google.com/detail/grammarly-grammar-checker/kbfnbcaeplbcioakkpcpgfkobkghlhen">Grammarly</a></h3>
 		<p><img width="20%" src="images/grammarly.png" class="float_left">Elevate your writing with Grammarly for Chrome, an all-in-one communication assistant featuring grammar check, generative AI, and more. Experience real-time suggestions as you work in your browser, receiving comprehensive feedback on spelling, grammar, punctuation, clarity, and writing style. Beyond a simple proofreader, Grammarly empowers you to write with confidence, aiding in the selection of the best words to articulate your thoughts and communicate ideas effortlessly. To get started, sign up for a Grammarly account, and then you're good to go. Leverage Grammarly's generative AI capabilities to produce contextually relevant drafts, ideas, replies, and more, making your writing process more efficient and effective.</p>
-		<br><br><br><br>
+
 	</div>
-
-	<script src="navbar.js"></script>
-	</body>
-
+</body>
 </html>

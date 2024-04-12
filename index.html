@@ -1,44 +1,66 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The official website of shinymoth97</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="icon" href="images/croplogo Round.png">
+    <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.0/css/all.csss" as="font">
 
-<html>
-	<head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-		<link rel="stylesheet" href="main.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-		<link rel="icon" href="images/croplogo Round.png">
-		<link rel="preload" href="https://use.fontawesome.com/releases/v5.13.0/css/all.csss" as="font">
-		<link rel="preload" href="images/bg.png" as="images">
-		<title>The official website of shinymoth97</title>
-	</head>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbarContainer"></div>
+    <script src="navbar.js"></script>
 
-	<body onload="document.body.classList.add('loaded')">
-		<div id="navbarContainer"></div>
+    <!-- Main Content -->
+    <main>
         <div class="page">
-			<h1>Welcome to Shinymoth97's Website</h1>
+            <div class="heading">
+                <h1>Welcome to Shinymoth97's Website</h1>
+                <img class="laptop" src="images/laptop.jpg" alt="Image of a laptop">
+            </div>
 
+            <!-- About Section -->
+            <section id="about">
+                <h2>About Shinymoth97:</h2>
+                <p>As an individual passionate about mastering the art of computers, coding, and gaming, I created this website to share tutorials and resources with fellow enthusiasts. Whether you're exploring the basics of coding, delving into advanced programming concepts, or seeking insights into gaming and computer technology, you'll find valuable content tailored to your interests.</p>
+            </section>
 
-    		<h2>About Shinymoth97:</h2>
-    		<p>As an individual passionate about mastering the art of computers, coding, and gaming, I created this website to share tutorials and resources with fellow enthusiasts. Whether you're exploring the basics of coding, delving into advanced programming concepts, or seeking insights into gaming and computer technology, you'll find valuable content tailored to your interests.</p>
+			<br>
 
-    		<h2>Discover:</h2>
+            <!-- Discover Section -->
+            <section id="discover">
+                <h2>Discover:</h2>
+                <section id="downloads">
+                    <h3><a href="downloads.html">Downloads:</a></h3>
+                    <p>Explore a diverse collection of downloadable files covering a wide range of categories to enhance your computing experience. Whether you're seeking documents, templates, media files, or other resources, you'll find a variety of downloadable content tailored to your needs.</p>
+                </section>
 
-    		<h3>Downloads:</h3>
-    		<p>Explore a diverse collection of downloadable files covering a wide range of categories to enhance your computing experience. Whether you're seeking documents, templates, media files, or other resources, you'll find a variety of downloadable content tailored to your needs.</p>
+                <section id="tutorials">
+                    <h3><a href="tutorials.html">Tutorials:</a></h3>
+                    <p>Explore a wide range of tutorials covering various topics in computer science, programming, gaming, computer navigation, and more. These tutorials provide step-by-step instructions to help you explore diverse areas, from coding to understanding computer hardware, and beyond. Whether you're delving into gaming, mastering computer navigation, or honing your coding skills, you'll find comprehensive resources to expand your knowledge and expertise.</p>
+                </section>
 
-    		<h3>Tutorials:</h3>
-    		<p>Explore a wide range of tutorials covering various topics in computer science, programming, gaming, computer navigation, and more. These tutorials provide step-by-step instructions to help you explore diverse areas, from coding to understanding computer hardware, and beyond. Whether you're delving into gaming, mastering computer navigation, or honing your coding skills, you'll find comprehensive resources to expand your knowledge and expertise.</p>
+                <section id="app-hub">
+                    <h3><a href="apphub.html">App Hub:</a></h3>
+                    <p>Discover a curated selection of recommended apps, websites, and Chrome extensions for various devices and platforms. Whether you're using a desktop computer, laptop, tablet, or smartphone, find valuable tools and resources to enhance your productivity, creativity, and entertainment. From productivity apps to entertainment websites and useful browser extensions, explore a diverse range of recommendations tailored to your needs.</p>
+                </section>
 
-   			 <h3>App Hub:</h3>
-   			 <p>Discover a curated selection of recommended apps, websites, and Chrome extensions for various devices and platforms. Whether you're using a desktop computer, laptop, tablet, or smartphone, find valuable tools and resources to enhance your productivity, creativity, and entertainment. From productivity apps to entertainment websites and useful browser extensions, explore a diverse range of recommendations tailored to your needs.</p>
+                <section id="shortcuts">
+                    <h3><a href="shortcuts.html">Shortcuts:</a></h3>
+                    <p>Discover time-saving keyboard shortcuts, tips, and tricks for navigating applications and streamlining your workflow. Whether you're navigating software applications, browsing the web, or managing your computer efficiently, these shortcuts will help you become more productive in various tasks. From basic operations to advanced functions, master the art of efficient computing with these essential tips.</p>
+                </section>
+            </section>
 
-   			 <h3>Shortcuts:</h3>
-   			 <p>Discover time-saving keyboard shortcuts, tips, and tricks for navigating applications and streamlining your workflow. Whether you're navigating software applications, browsing the web, or managing your computer efficiently, these shortcuts will help you become more productive in various tasks. From basic operations to advanced functions, master the art of efficient computing with these essential tips.</p>
-
-   			 <h3>Contact:</h3>
-   			 <p>Get in touch with Shinymoth97 to share feedback, ask questions, or collaborate on projects. Whether you have suggestions for improving the website or need personalized assistance with programming challenges, feel free to reach out via email or social media.</p>
-		</div>
-
-	<script src="navbar.js"></script>
-	</body>
-
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2><a href="contact.html">Contact:</a></h2>
+                <p>Get in touch with Shinymoth97 to share feedback, ask questions, or collaborate on projects. Whether you have suggestions for improving the website or need personalized assistance with programming challenges, feel free to reach out via email or social media.</p>
+            </section>
+        </div>
+    </main>
+</body>
 </html>

@@ -1,15 +1,14 @@
 /* Body Styling */
 body {
+    background-color: #000000;
     font-family: sans-serif;
     color: #808080;
 	color: lightgrey;
-    margin: auto;
-    margin-top: 60px;
+    margin: 0;
     background-image: url("images/bg.png");
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: contain;
-	visibility: hidden;
     text-align: center;
 }
 
@@ -48,19 +47,38 @@ h2 {
     color: #00e617;
     font-size: 35px;
     margin-left: 50px;
+    clear: both;
+}
+
+/* Styling for h2 Inside Anchor Links */
+h2 a {
+    color: #00e617;
+    text-decoration: underline
 }
 
 /* Styling for h1 */
+.heading {
+    display: flex;
+    align-items: center;
+    margin: 0 50px;
+    width: calc(100% - 100px);
+}
+
+.laptop {
+    max-width: calc(92% - 100px);
+    width: 40vw;
+}
+
 h1 {
-    font-size: 50px;
+    font-size: 60px;
     color: #ffffff;
     background-color: #00e617;
-    padding: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding: 24px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    margin-right: 50px;
+    width: 100%;
 }
 
 /* Styling for h3 */
@@ -89,6 +107,7 @@ h3 {
 	background-color: rgb(65, 65, 65);
     margin: auto;
     padding: 20px 0px;
+    margin-top: 60px;
 }
 
 /* Paragraph, Details, and Ordered List Styling */
@@ -255,12 +274,14 @@ tr:nth-child(even) {
     float: right;
     background-color: white;
     margin-left: 10px;
+    overflow: auto;
 }
 
 .float_left {
     float: left;
     background-color: white;
     margin-right: 10px;
+    overflow: auto;
 }
 
 /* Box Sizing */
@@ -373,6 +394,7 @@ textarea {
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	left: 15px;
+    z-index: 999;
   }
   
   .icon-bar a {
