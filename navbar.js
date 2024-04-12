@@ -29,6 +29,7 @@ const navbarCode = `
         <a href="shortcuts.html" class="dropbtn nav-link">Shortcuts <i class="fa fa-caret-down"></i></a>
         <div class="dropdown-content">
             <a href="youtube_shortcuts.html" class="nav-link">Youtube</a>
+            <a href="chrome_shortcuts.html" class="nav-link">Chrome</a>
         </div>
     </div>
 

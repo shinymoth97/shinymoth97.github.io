@@ -323,6 +323,7 @@ input,
 select,
 textarea {
     margin-left: 50px;
+    font-family: sans-serif;
 }
 
 /* Icon Styling */
