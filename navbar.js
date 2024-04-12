@@ -33,7 +33,7 @@ const navbarCode = `
         </div>
     </div>
 
-    <a href="contact.html" class="dropbtn nav-link">Contact</a>
+    <a href="contact.html" class="nav-link">Contact</a>
 
     <a href="javascript:void(0);" class="icon nav-link" onclick="myFunction()">
         <i class="fa fa-bars"></i>
@@ -83,14 +83,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// JavaScript to toggle dropdown on mobile
-document.querySelectorAll('.dropbtn').forEach(item => {
-    item.addEventListener('click', event => {
-        const dropdownContent = item.nextElementSibling;
-        if (dropdownContent.style.display === 'block') {
-            dropdownContent.style.display = 'none';
-        } else {
-            dropdownContent.style.display = 'block';
+// Get all dropdown buttons
+var dropdownBtns = document.querySelectorAll('.dropbtn');
+
+// Loop through each dropdown button
+dropdownBtns.forEach(function(btn) {
+    // Add click event listener to the button
+    btn.addEventListener('click', function(e) {
+        var content = this.nextElementSibling; // Get the dropdown content
+        // Check if the dropdown content is hidden
+        if (!content.classList.contains('show')) {
+            e.preventDefault(); // Prevent the default link behavior only if the dropdown is hidden
         }
+        // Toggle visibility of the dropdown content
+        content.classList.toggle('show');
     });
+});
+
+// Close dropdowns when clicking outside
+window.addEventListener('click', function(e) {
+    // Check if the clicked element is not a dropdown button or its parent
+    if (!e.target.matches('.dropbtn') && !e.target.closest('.dropdown')) {
+        // Get all dropdown contents
+        var dropdownContents = document.querySelectorAll('.dropdown-content');
+        // Loop through each dropdown content
+        dropdownContents.forEach(function(content) {
+            // Check if the dropdown content is visible
+            if (content.classList.contains('show')) {
+                // Hide the dropdown content
+                content.classList.remove('show');
+            }
+        });
+    }
 });
