@@ -60,7 +60,7 @@ h2 a {
     display: flex;
     align-items: center;
     margin: 0 50px;
-    width: 500px;
+    width: calc(100% - 100px);
 }
 
 .laptop {
@@ -77,6 +77,12 @@ h1 {
     font-weight: bold;
     margin-right: 50px;
     width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+    .laptop {
+        width: 250px;
+    }
 }
 
 /* Styling for h3 */
@@ -136,16 +142,6 @@ iframe {
 /* Remove Scrollbar for Webkit Browsers */
 body::-webkit-scrollbar {
     display: none;
-}
-
-/* Keyframe Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 /* Navigation Bar Styling */
