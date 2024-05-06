@@ -59,6 +59,52 @@ function myFunction() {
     }
 }
 
+// Function to handle dropdown behavior
+function handleDropdown(e) {
+    e.preventDefault(); // Prevent default link behavior
+
+    var content = this.nextElementSibling; // Get the dropdown content
+    var shouldNavigate = !isMobile(); // Determine if navigation should occur
+
+    // Toggle visibility of the dropdown content
+    content.classList.toggle('show');
+
+    // If not on mobile, navigate to the parent link when dropdown is visible
+    if (shouldNavigate && content.classList.contains('show')) {
+        window.location.href = this.href; // Navigate to the parent link
+    }
+}
+
+// Function to handle document click outside dropdown
+function handleDocumentClick(e) {
+    // Close dropdowns when clicking outside
+    var dropdowns = document.querySelectorAll('.dropdown-content');
+    dropdowns.forEach(function(content) {
+        if (content.classList.contains('show') && !content.parentNode.contains(e.target)) {
+            content.classList.remove('show');
+        }
+    });
+}
+
+// Function to check if the device is mobile based on screen width
+function isMobile() {
+    return window.matchMedia("(max-width: 750px)").matches;
+}
+
+// Attach click event listeners to dropdown buttons
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdownBtns = document.querySelectorAll('.dropbtn');
+
+    // Loop through each dropdown button
+    dropdownBtns.forEach(function(btn) {
+        // Add click event listener to the button
+        btn.addEventListener('click', handleDropdown);
+    });
+
+    // Add document click listener to close dropdowns
+    document.addEventListener('click', handleDocumentClick);
+});
+
 // Add 'active' class to current page link in navigation menu
 const navLinks = document.querySelectorAll(".nav-link");
 for (const link of navLinks) {
@@ -66,53 +112,4 @@ for (const link of navLinks) {
         link.classList.add("active");
         link.removeAttribute("href");
     }
-}
-
-// Function to adjust the scroll margin for headings based on navbar height
-document.addEventListener('DOMContentLoaded', function () {
-    var navbar = document.querySelector('nav');
-    var headings = document.querySelectorAll('h3');
-
-    if (navbar) {
-        var navbarHeight = navbar.offsetHeight;
-
-        headings.forEach(function (heading) {
-            heading.style.scrollMarginTop = (navbarHeight + 30) + 'px';
-        });
-    }
-});
-
-
-// Get all dropdown buttons
-var dropdownBtns = document.querySelectorAll('.dropbtn');
-
-// Loop through each dropdown button
-dropdownBtns.forEach(function(btn) {
-    // Add click event listener to the button
-    btn.addEventListener('click', function(e) {
-        var content = this.nextElementSibling; // Get the dropdown content
-        // Check if the dropdown content is hidden
-        if (!content.classList.contains('show')) {
-            e.preventDefault(); // Prevent the default link behavior only if the dropdown is hidden
-        }
-        // Toggle visibility of the dropdown content
-        content.classList.toggle('show');
-    });
-});
-
-// Close dropdowns when clicking outside
-window.addEventListener('click', function(e) {
-    // Check if the clicked element is not a dropdown button or its parent
-    if (!e.target.matches('.dropbtn') && !e.target.closest('.dropdown')) {
-        // Get all dropdown contents
-        var dropdownContents = document.querySelectorAll('.dropdown-content');
-        // Loop through each dropdown content
-        dropdownContents.forEach(function(content) {
-            // Check if the dropdown content is visible
-            if (content.classList.contains('show')) {
-                // Hide the dropdown content
-                content.classList.remove('show');
-            }
-        });
-    }
-});
+};

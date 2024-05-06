@@ -192,6 +192,41 @@ nav {
     display: block;
 }
 
+.show {
+    display: block;
+}
+
+/* Default styles for dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show dropdown content when parent button is clicked */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Apply hover styles only on non-mobile devices */
+@media (hover: hover) {
+    /* Add styles for non-mobile devices (e.g., desktops, laptops) */
+    .dropbtn {
+        /* Add hover styles for dropdown buttons */
+        cursor: pointer;
+    }
+
+    /* Ensure dropdown content is visible on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+
+
 /* Active Link Styling */
 nav a.active {
     color: #ff7255;
