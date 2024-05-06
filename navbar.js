@@ -61,19 +61,23 @@ function myFunction() {
 
 // Function to handle dropdown behavior
 function handleDropdown(e) {
-    e.preventDefault(); // Prevent default link behavior
-
+    var isMobileDevice = isMobile();
     var content = this.nextElementSibling; // Get the dropdown content
-    var shouldNavigate = !isMobile(); // Determine if navigation should occur
+
+    // Check if it's a mobile device and dropdown is closed
+    if (isMobileDevice && !content.classList.contains('show')) {
+        e.preventDefault(); // Prevent default link behavior only on the first click
+    }
 
     // Toggle visibility of the dropdown content
     content.classList.toggle('show');
 
-    // If not on mobile, navigate to the parent link when dropdown is visible
-    if (shouldNavigate && content.classList.contains('show')) {
+    // If not on mobile or dropdown is already open, navigate on subsequent clicks
+    if (!isMobileDevice || content.classList.contains('show')) {
         window.location.href = this.href; // Navigate to the parent link
     }
 }
+
 
 // Function to handle document click outside dropdown
 function handleDocumentClick(e) {
