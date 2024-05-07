@@ -338,27 +338,12 @@ textarea {
 }
 
 
+
 /* Icon Styling */
 .icon, .banner {
     color: white;
     display: none;
 }
-
-/* Apply styles to <p> elements with specified classes */
-.nav-link.icon.banner {
-    vertical-align: middle;
-    height: 70px;
-    text-align: left;
-    font-family: "Verdana";
-    background-color: black;
-    color: white;
-    padding: 0px 21px;
-    font-size: 15px;
-    display: inline-block;
-    line-height: 70px;
-    width: 100%;
-}
-
 
 /* Responsive Navigation Styling */
 @media screen and (max-width: 750px) {
@@ -390,6 +375,20 @@ textarea {
         margin: auto;
         top: 0;
     }
+    /* Apply styles to <p> elements with specified classes */
+    .nav-link.icon.banner {
+        vertical-align: middle;
+        height: 70px;
+        text-align: left;
+        font-family: "Verdana";
+        background-color: black;
+        color: white;
+        padding: 0px 21px;
+        font-size: 15px;
+        display: inline-block;
+        line-height: 70px;
+        width: 100%;
+}
 }
 
 @media screen and (max-width: 750px) {
