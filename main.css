@@ -5,22 +5,20 @@ body {
     color: #808080;
 	color: lightgrey;
     margin: 0;
+    margin-top: 30px;
     background-image: url("images/bg.png");
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: contain;
     text-align: center;
-}
-
-body.loaded {
-	visibility: visible;
+    width: 100%;
 }
 
 /* Paragraph Indentation */
 .indent p {
     position: relative;
     left: 25px;
-    width: calc(100% - 125px);
+    width: calc(100% - 25);
 }
 
 
@@ -38,14 +36,13 @@ a:hover {
 h3 a {
     color: #00e617;
     text-decoration: underline;
-    width: calc(100% - 100px);
+    width: 100%;
 }
 
 /* Styling for h2 */
 h2 {
     color: #00e617;
     font-size: 35px;
-    margin-left: 50px;
     clear: both;
 }
 
@@ -59,8 +56,8 @@ h2 a {
 .heading {
     display: flex;
     align-items: center;
-    margin: 0 50px;
-    width: calc(100% - 100px);
+    margin: 0;
+    width: 100%;
     vertical-align: middle;
 }
 
@@ -76,8 +73,7 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    width: calc(47.5% - 40px);
-    font-size: calc(3vw);
+    font-size: 3vw;
     margin-right: 5%;
 }
 
@@ -85,7 +81,6 @@ h1 {
 h3 {
     color: #00e617;
     font-size: 20px;
-    margin-left: 50px;
 }
 
 /* Standout Text Styling */
@@ -101,23 +96,20 @@ h3 {
 
 /* Page Content Styling */
 .page {
+    width: calc(100% - 200px);
     text-align: left;
-    width: 92%;
-    background-color: #ffffff;
-	background-color: rgb(65, 65, 65);
     margin: auto;
+	background-color: rgb(65, 65, 65);
     margin-bottom: 50px;
-    padding: 20px 0px;
-    margin-top: 60px;
+    padding: 70px;
 }
 
 /* Paragraph, Details, and Ordered List Styling */
-p,
 details,
 ol {
     text-align: justify;
-    padding: 0px 50px;
-    width: calc(100% - 100px);
+    padding: 0px;
+    width: 100%;
 }
 
 /* Ordered List Styling */
@@ -125,16 +117,20 @@ ol {
     list-style-position: inside;
 }
 
-/* Image Styling */
-img {
-    margin-top: 10px;
+/* Iframe Styling */
+.iframe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    grid-gap: 5px; /* Spacing between grid items */
+    justify-content: center; /* Center content horizontally */
 }
 
-/* Iframe Styling */
-iframe {
-    margin-right: -4px;
-    display: inline;
+.iframe-grid iframe {
+    display: block;
+    width: 100%; /* Ensure iframes take up full width of grid cells */
+    height: 320px;
 }
+
 
 /* Remove Scrollbar for Webkit Browsers */
 body::-webkit-scrollbar {
@@ -196,21 +192,6 @@ nav {
     display: block;
 }
 
-/* Default styles for dropdown content */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Show dropdown content when parent button is clicked */
-.dropdown-content.show {
-    display: block;
-}
-
 /* Apply hover styles only on non-mobile devices */
 @media (hover: hover) {
     /* Add styles for non-mobile devices (e.g., desktops, laptops) */
@@ -224,8 +205,6 @@ nav {
         display: block;
     }
 }
-
-
 
 /* Active Link Styling */
 nav a.active {
@@ -280,8 +259,7 @@ table {
     border-collapse: collapse;
     color: black;
     background-color: white;
-    margin: auto;
-    width: calc(100% - 100px);
+    width: 100%;
 }
 
 td,
@@ -310,16 +288,11 @@ tr:nth-child(even) {
     overflow: auto;
 }
 
-/* Box Sizing */
-body {
-    box-sizing: border-box;
-}
-
 /* Form Input Styling */
 input[type=text],
 input[type=email],
 textarea {
-    width: 92%;
+    width: 80%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -348,15 +321,44 @@ label,
 input,
 select,
 textarea {
-    margin-left: 50px;
     font-family: sans-serif;
 }
 
+/* Form Input Styling */
+input[type=text],
+input[type=email],
+textarea {
+    width: 100%; /* Calculate the width with 50px gap on both sides */
+    padding: 12px; /* Padding for the input elements */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 6px 0px; /* Margin with 50px gap on both sides */
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
 /* Icon Styling */
-.icon {
+.icon, .banner {
     color: white;
     display: none;
 }
+
+/* Apply styles to <p> elements with specified classes */
+.nav-link.icon.banner {
+    vertical-align: middle;
+    height: 70px;
+    text-align: left;
+    font-family: "Verdana";
+    background-color: black;
+    color: white;
+    padding: 0px 21px;
+    font-size: 15px;
+    display: inline-block;
+    line-height: 70px;
+    width: 100%;
+}
+
 
 /* Responsive Navigation Styling */
 @media screen and (max-width: 750px) {
@@ -371,10 +373,22 @@ textarea {
     .topnav a:not(.first) {
         display: none;
     }
-
     .topnav a.icon {
-        float: right;
-        display: block;
+        display: inline;
+        position: fixed;
+        right: 0;
+    }
+
+    .topnav a.banner {
+        display: inline;
+        position: fixed;
+        right: 0;
+    }
+
+    .banner {
+        position: fixed;
+        margin: auto;
+        top: 0;
     }
 }
 
@@ -384,7 +398,7 @@ textarea {
     }
 
     .topnav.responsive a.icon {
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
     }
@@ -401,6 +415,12 @@ textarea {
         position: fixed;
     }
 
+    .topnav.responsive .banner{
+        display: inline-block;
+        left: 102px;
+        padding: 0px 21px;
+    }
+
     .topnav.responsive .dropdown-content {
         left: 120px;
         top: 22.5px;
@@ -413,10 +433,6 @@ textarea {
     }
 }
 
-/*Social Media Icons*/
-/*Social Media Icons*/
-/*Social Media Icons*/
-/*Social Media Icons*/
 /*Social Media Icons*/
 .icon-bar {
     position: fixed;
@@ -498,5 +514,21 @@ textarea {
     }
     .fa-discord::before {
         transform: translate(210%, -45%); /* Center the icon */
+    }
+}
+
+
+
+/* Styling for .page on Mobile */
+@media screen and (max-width: 750px) {
+    .page {
+        padding: 35px 35px;
+        width: 70%;
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 750px) {
+    body {
+        margin-top: 50px;
     }
 }

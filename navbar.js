@@ -35,6 +35,10 @@ const navbarCode = `
 
     <a href="contact.html" class="nav-link">Contact</a>
 
+    <p href="#" class="nav-link icon banner" onclick="myFunction()">
+        shinymoth97's Website
+    </p>
+
     <a href="javascript:void(0);" class="icon nav-link" onclick="myFunction()">
         <i class="fa fa-bars"></i>
     </a>
@@ -61,38 +65,59 @@ function myFunction() {
 
 // Function to handle dropdown behavior
 function handleDropdown(e) {
-    var isMobileDevice = isMobile();
     var content = this.nextElementSibling; // Get the dropdown content
 
-    // Check if it's a mobile device and dropdown is closed
-    if (isMobileDevice && !content.classList.contains('show')) {
-        e.preventDefault(); // Prevent default link behavior only on the first click
-    }
+    if (isMobile()) {
+        e.preventDefault(); // Prevent default link behavior on mobile devices
+        // Toggle visibility of the dropdown content
+        content.classList.toggle('show');
 
-    // Toggle visibility of the dropdown content
-    content.classList.toggle('show');
-
-    // If not on mobile or dropdown is already open, navigate on subsequent clicks
-    if (!isMobileDevice || content.classList.contains('show')) {
-        window.location.href = this.href; // Navigate to the parent link
+        // If the dropdown is already open, allow navigation after showing the dropdown
+        if (content.classList.contains('show')) {
+            // Remove the click event listener to prevent further toggling
+            this.removeEventListener('click', handleDropdown);
+            this.addEventListener('click', navigateOrToggleDropdown); // Change the event listener to navigate the link or toggle dropdown
+        } else {
+            // Restore click event listener to show dropdown on next click
+            this.addEventListener('click', handleDropdown);
+        }
+    } else {
+        // Non-mobile behavior (direct navigation on click)
+        window.location.href = this.href;
     }
 }
 
+// Function to navigate to the link destination or toggle dropdown
+function navigateOrToggleDropdown(e) {
+    var content = this.nextElementSibling; // Get the dropdown content
+
+    if (!content.classList.contains('show')) {
+        // Show the dropdown if it's not already shown
+        content.classList.add('show');
+    } else {
+        // Navigate to the link destination
+        window.location.href = this.href;
+    }
+}
 
 // Function to handle document click outside dropdown
 function handleDocumentClick(e) {
     // Close dropdowns when clicking outside
-    var dropdowns = document.querySelectorAll('.dropdown-content');
-    dropdowns.forEach(function(content) {
+    var dropdownContents = document.querySelectorAll('.dropdown-content');
+    dropdownContents.forEach(function(content) {
         if (content.classList.contains('show') && !content.parentNode.contains(e.target)) {
             content.classList.remove('show');
+            // Restore the click event listener for parent links
+            var parentLink = content.parentNode.querySelector('.dropbtn');
+            parentLink.addEventListener('click', handleDropdown);
         }
     });
-}
 
-// Function to check if the device is mobile based on screen width
-function isMobile() {
-    return window.matchMedia("(max-width: 750px)").matches;
+    // Restore click event listener for all dropdown buttons
+    var dropdownBtns = document.querySelectorAll('.dropbtn');
+    dropdownBtns.forEach(function(btn) {
+        btn.addEventListener('click', handleDropdown);
+    });
 }
 
 // Attach click event listeners to dropdown buttons
@@ -109,11 +134,18 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', handleDocumentClick);
 });
 
+// Function to check if the device is mobile based on screen width
+function isMobile() {
+    return window.matchMedia("(max-width: 750px)").matches;
+}
+
 // Add 'active' class to current page link in navigation menu
-const navLinks = document.querySelectorAll(".nav-link");
-for (const link of navLinks) {
-    if (link.href === window.location.href) {
-        link.classList.add("active");
-        link.removeAttribute("href");
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll(".nav-link");
+    for (const link of navLinks) {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+            link.removeAttribute("href");
+        }
     }
-};
+});
