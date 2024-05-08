@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to check if the device is mobile based on screen width
 function isMobile() {
-    return window.matchMedia("(max-width: 695px)").matches;
+    return window.matchMedia("(max-width: 650px)").matches;
 }
 
 // Add 'active' class to current page link in navigation menu
