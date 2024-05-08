@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to check if the device is mobile based on screen width
 function isMobile() {
-    return window.matchMedia("(max-width: 750px)").matches;
+    return window.matchMedia("(max-width: 700px)").matches;
 }
 
 // Add 'active' class to current page link in navigation menu
@@ -147,5 +147,19 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add("active");
             link.removeAttribute("href");
         }
+    }
+});
+
+// Dynamically adjust scroll-margin-top based on the height of the nav element
+document.addEventListener('DOMContentLoaded', function () {
+    var navbar = document.querySelector('nav');
+    var headings = document.querySelectorAll('h3');
+
+    if (navbar) {
+        var navbarHeight = navbar.offsetHeight;
+
+        headings.forEach(function (heading) {
+            heading.style.scrollMarginTop = (navbarHeight + 50) + 'px';
+        });
     }
 });
